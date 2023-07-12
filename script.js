@@ -73,6 +73,13 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+// current balance display
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, cur) => acc + cur);
+  labelBalance.textContent = `${balance}€`;
+};
+calcDisplayBalance(account1.movements);
+
 // first letter of user words
 const createUserNames = function (accs) {
   accs.forEach(function (acc) {
@@ -95,11 +102,11 @@ createUserNames(accounts);
 
 /////////////////////////////////////////////////
 // using filter
-const withdrawals = movements.filter(function (mov) {
-  return mov < 0;
-});
+// const withdrawals = movements.filter(function (mov) {
+//   return mov < 0;
+// });
 
-// accumulator => snowball
-const balance = movements.reduce(function (acc, cur, i, arr) {
-  return acc + cur;
-}, 0);
+// // accumulator => snowball
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//   return acc + cur;
+// }, 0);
