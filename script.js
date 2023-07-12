@@ -74,13 +74,13 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 // first letter of user words
-const createUserNames = function (accs){
-  accs.forEach(function (acc)){
-    acc.username=acc.owner
-    .toLowerCase()
-    .split(' ')
-    .map(name => name[0])
-    .join('');
+const createUserNames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
   });
 };
 createUserNames(accounts);
@@ -94,3 +94,12 @@ createUserNames(accounts);
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+// using filter
+const withdrawals = movements.filter(function (mov) {
+  return mov < 0;
+});
+
+// accumulator => snowball
+const balance = movements.reduce(function (acc, cur, i, arr) {
+  return acc + cur;
+}, 0);
