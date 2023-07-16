@@ -1,2 +1,3 @@
 # Bankist-App
-- A minimalist Banking
+
+- A minimalist Banking Application
