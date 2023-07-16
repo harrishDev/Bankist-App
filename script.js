@@ -116,6 +116,25 @@ const createUserNames = function (accs) {
 };
 createUserNames(accounts);
 
+// event handler
+let currentAccount;
+
+btnLogin.addEventListener('click', function (e) {
+  // prevent form from submitting
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+  }
+});
+
 // const currencies = new Map([
 //   ['USD', 'United States dollar'],
 //   ['EUR', 'Euro'],
