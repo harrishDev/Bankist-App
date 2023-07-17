@@ -1,3 +1,17 @@
 # Bankist-App
+Bankist is a minimalistic online banking application that allows the user to
+- Log in with a username and password
+- View and sort their monetary movements
+- Transfer money to another account
+- Request a loan from the bank
+- Delete their account
 
-- A minimalist Banking Application
+## Log in credentials:
+- username: js | password: 1111
+- username: jd | password 2222
+
+## Technologies Used:
+
+  * HTML
+  * CSS
+  * JavaScript
