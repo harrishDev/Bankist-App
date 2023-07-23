@@ -57,6 +57,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// display movements
 const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
 
@@ -70,7 +71,6 @@ const displayMovements = function (movements, sort = false) {
     <div class="movements__value">${mov}€</div>
   </div>
   `;
-
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
@@ -191,7 +191,7 @@ btnLoan.addEventListener('click', function (e) {
   inputLoanAmount.value = '';
 });
 
-// close account used some
+// close account
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
   if (
