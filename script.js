@@ -175,7 +175,7 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-// request loan
+// request loan(some fn)
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = Number(inputLoanAmount.value);
@@ -188,7 +188,7 @@ btnLoan.addEventListener('click', function (e) {
   inputLoanAmount.value = '';
 });
 
-// close account
+// close account used some
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
   if (
