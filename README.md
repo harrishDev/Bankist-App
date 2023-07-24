@@ -7,8 +7,8 @@ Bankist is a minimalistic online banking application that allows the user to
 - Delete their account
 
 ## Log in credentials:
-- username: hm | password: 7777
-- username: vr | password 9999
+- user: hm | pin: 7777
+- user: vr | pin: 9999
 
 ## Technologies Used:
 
